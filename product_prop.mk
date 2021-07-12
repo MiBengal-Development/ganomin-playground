@@ -4,10 +4,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.sf.disable_blurs=1 \
     ro.sf.blurs_are_expensive=1
 
-# Always use GPU for screen compositing
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.disable_hwc_overlays=1
-
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=opengl \

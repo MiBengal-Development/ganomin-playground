@@ -8,6 +8,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true
 
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+    
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=skiagl \
@@ -20,9 +24,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.media_vol_default=10 \
-    ro.config.media_vol_steps=15 \
-    ro.config.vc_call_vol_steps=6
+    ro.config.media_vol_steps=15
 
 # Power-saving props
 PRODUCT_PROPERTY_OVERRIDES += \

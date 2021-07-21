@@ -33,6 +33,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     power.saving.mode=1 \
     pm.sleep_mode=1
 
+# IORap
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.iorapd.enable=true \
+    iorapd.perfetto.enable=true \
+    iorapd.readahead.enable=true
+
 # Disable Rescue Party, Fluid recommends userdebug build anyway - also keeps "rescuing" the phone when system is modified
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true \

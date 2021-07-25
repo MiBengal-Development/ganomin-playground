@@ -1,7 +1,6 @@
 # Blurs
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1 \
-    persist.sys.sf.disable_blurs=1 \
     ro.sf.blurs_are_expensive=1
 
 # Dex2oat
@@ -14,14 +13,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
-    debug.hwui.renderer=skiagl \
+    debug.hwui.renderer=opengl \
+    debug.cpurend.vsync=false \
+    debug.sf.hw=1 \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.disable_backpressure=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.running_without_sync_framework=true \
     ro.surface_flinger.use_context_priority=true \
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.disable_backpressure=1 \
-    debug.sf.hw=0
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno
 
+# Always use GPU for screen compositing - fixes flickering on webview dependent apps
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_hwc_overlays=1
+    
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=15
@@ -33,7 +39,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.power.collapse=0 \
     power.saving.mode=1 \
     pm.sleep_mode=1
-
+    
 # IORap
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.iorapd.enable=true \

@@ -15,6 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.hwui.renderer=opengl \
     debug.cpurend.vsync=false \
+    debug.sf.enable_gl_backpressure=1 \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_backpressure=1 \

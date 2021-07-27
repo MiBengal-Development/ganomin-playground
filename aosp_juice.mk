@@ -16,10 +16,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 # Adds face unlock if package is available on ROM source.
 TARGET_SUPPORT_FACE_UNLOCK := true
 
-$(call inherit-product, vendor/aosp/common.mk)
-
-#AEX build minkan
-EXTENDED_BUILD_TYPE := MINKAN
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_juice

@@ -182,6 +182,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+HEALTHD_USE_BATTERY_INFO := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/juice/BoardConfigVendor.mk

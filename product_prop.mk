@@ -45,6 +45,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.iorapd.enable=true \
     iorapd.perfetto.enable=true \
+    persist.device_config.runtime_native_boot.iorap_perfetto_enable=true \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true \
+    persist.device_config.runtime_native_boot.iorapd_perfetto_enable=true \
+    persist.device_config.runtime_native_boot.iorapd_readahead_enable=true \
     iorapd.readahead.enable=true
 
 # Disable Rescue Party, Fluid recommends userdebug build anyway - also keeps "rescuing" the phone when system is modified

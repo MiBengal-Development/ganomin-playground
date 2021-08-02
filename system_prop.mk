@@ -54,8 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # LMKD
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.psi_complete_stall_ms=150 \
-    ro.lmk.swap_free_low_percentage=20 \
-    ro.lmk.kill_timeout_ms=100
+    ro.lmk.swap_free_low_percentage=20 
 
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \

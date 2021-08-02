@@ -15,6 +15,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 # Adds face unlock if package is available on ROM source.
 TARGET_SUPPORT_FACE_UNLOCK := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 

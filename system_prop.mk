@@ -51,6 +51,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.first_wb_delay_mins=1440 \
     ro.zram.periodic_wb_delay_hours=24
 
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.psi_complete_stall_ms=150 \
+    ro.lmk.swap_free_low_percentage=20 \
+    ro.lmk.kill_timeout_ms=100
+
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true

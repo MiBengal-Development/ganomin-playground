@@ -24,6 +24,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.surface_flinger.running_without_sync_framework=true \
     ro.surface_flinger.use_context_priority=true \
     vendor.display.disable_rotator_downscale=1 \

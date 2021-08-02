@@ -836,4 +836,7 @@
     <!-- Flashlight on power button -->
      <integer name="config_flashlightProximityTimeout">-1</integer>
 
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">false</bool>
+
 </resources>

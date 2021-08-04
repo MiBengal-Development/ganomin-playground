@@ -6,7 +6,7 @@
 
 $(call inherit-product, device/xiaomi/juice/device.mk)
 
-# Inherit some common PixelExperience stuff.
+# Inherit some common descendant stuff.
 WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
@@ -17,10 +17,10 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORT_FACE_UNLOCK := true
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_juice
+PRODUCT_NAME := descendant_juice
 PRODUCT_DEVICE := juice
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := sm6115

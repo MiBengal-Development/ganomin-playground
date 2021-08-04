@@ -54,6 +54,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # LMKD
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.psi_complete_stall_ms=150 \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
     ro.lmk.swap_free_low_percentage=20 
 
 # Zygote

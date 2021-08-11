@@ -19,6 +19,9 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 
 $(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_WIDTH := 1080
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := descendant_juice
 PRODUCT_DEVICE := juice

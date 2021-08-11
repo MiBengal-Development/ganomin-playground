@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xtended_juice.mk
-	
+    $(LOCAL_DIR)/dot_juice.mk
+
 COMMON_LUNCH_CHOICES := \
-    xtended_juice-user \
-    xtended_juice-userdebug \
-    xtended_juice-eng
+    dot_juice-user \
+    dot_juice-userdebug \
+    dot_juice-eng

@@ -6,24 +6,22 @@
 
 $(call inherit-product, device/xiaomi/juice/device.mk)
 
-# Inherit some common descendant stuff.
-WITH_GAPPS := true
+# Inherit some common Dot stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
 TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
 # Adds face unlock if package is available on ROM source.
 TARGET_SUPPORT_FACE_UNLOCK := true
 TARGET_INCLUDE_PIXEL_CHARGER := true
-
-$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := descendant_juice
+PRODUCT_NAME := dot_juice
 PRODUCT_DEVICE := juice
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := sm6115

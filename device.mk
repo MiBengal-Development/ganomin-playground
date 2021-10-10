@@ -64,7 +64,7 @@ PRODUCT_PACKAGES += \
 # Google Camera
 PRODUCT_PACKAGES += \
     GoogleCameraGo
-    
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -135,10 +135,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
 # Vendor Overlay
 PRODUCT_COPY_FILES += \

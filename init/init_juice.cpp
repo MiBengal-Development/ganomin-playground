@@ -75,6 +75,16 @@ static const char *snet_prop_value[] = {
   NULL
 };
 
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info *pi;
+
+    pi = (prop_info *)__system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else if (add)
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
 static void workaround_snet_properties() {
 
   // Hide all sensitive props
@@ -89,16 +99,6 @@ std::vector<std::string> ro_props_default_source_order = {
     "system.",
     "vendor.",
 };
-
-void property_override(char const prop[], char const value[], bool add = true) {
-    prop_info *pi;
-
-    pi = (prop_info *)__system_property_find(prop);
-    if (pi)
-        __system_property_update(pi, value, strlen(value));
-    else if (add)
-        __system_property_add(prop, strlen(prop), value, strlen(value));
-}
 
 void vendor_load_properties() {
     const auto set_ro_build_prop = [](const std::string &source,
